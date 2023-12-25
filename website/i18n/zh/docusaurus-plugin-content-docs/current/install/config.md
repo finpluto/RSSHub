@@ -358,6 +358,10 @@ RSSHub 支持使用访问密钥 / 码，允许清单和拒绝清单三种方式�
 
 -   `LASTFM_API_KEY`: Last.fm API Key
 
+### LightNovel.us
+
+-   `SECURITY_KEY`: 在token中security_key的值，请去除%22，例如`{%22security_key%22:%223cXXXX%22}`,只需要3cXXXX部分
+
 ### Mastodon
 
 用户时间线路由：访问 `https://mastodon.example/settings/applications` 申请（替换掉 `mastodon.example`）。需要 `read:search` 权限
@@ -449,7 +453,11 @@ RSSHub 支持使用访问密钥 / 码，允许清单和拒绝清单三种方式�
 
 ### Twitter
 
-[Token 生成](https://github.com/zedeus/nitter/wiki/Guest-Account-Branch-Deployment)
+鉴于 Twitter 和其 API 访问的最新变化，已经设计了一种新的匿名访问 Twitter 的方法。该方法涉及使用在通过 Android 应用程序进行注册流程时创建的临时访客账户。
+
+详细信息请参阅 [Nitter - Guest Account Branch Deployment](https://github.com/zedeus/nitter/wiki/Guest-Account-Branch-Deployment) 和 [zedeus/nitter#983](https://github.com/zedeus/nitter/issues/983)。
+
+另外我们也准备了一个 Node.js 脚本来帮助你使用代理批量创建这些 token，[请点击这里](https://github.com/DIYgod/RSSHub/tree/master/scripts/twitter-token/generate.js)。
 
 -   `TWITTER_OAUTH_TOKEN`: 支持多个 key，用英文逗号 `,` 隔开
 -   `TWITTER_OAUTH_TOKEN_SECRET`: 支持多个 key，用英文逗号 `,` 隔开
@@ -490,16 +498,6 @@ RSSHub 支持使用访问密钥 / 码，允许清单和拒绝清单三种方式�
     2.  打开控制台， 刷新
     3.  找到 `https://bbs.pku.edu.cn/v2/home.php` 请求
     4.  找到请求头中的 Cookie
-
-### 吹牛部落
-
-用于栏目
-
--   `CHUINIU_MEMBER`: 吹牛部落登录后的 x-member，获取方式
-    1.  登陆后点开文章正文
-    2.  打开控制台，刷新
-    3.  找到 `http://api.duanshu.com/h5/content/detail` 开头的请求
-    4.  找到请求头中的 x-member
 
 ### 滴答清单
 

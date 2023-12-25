@@ -117,7 +117,7 @@ pnpm run start
 ### 关键词（带表格的说明）
 
 ```tsx
-<Route author="DIYgod" example="/pixiv/search/麻衣/popular/2" path="/pixiv/search/:keyword/:order?/:mode?" paramsDesc={['关键词', '排序方式，`popular` 按热门度排序，空或其他任意值按时间排，默认为 `date`', '过滤方式，见下表 默认为空']}>
+<Route author="DIYgod" example="/pixiv/search/Nezuko/popular/2" path="/pixiv/search/:keyword/:order?/:mode?" paramsDesc={['关键词', '排序方式，`popular` 按热门度排序，空或其他任意值按时间排，默认为 `date`', '过滤方式，见下表 默认为空']}>
 
 | 只看非 R18 内容 | 只看 R18 内容 | 不过滤   |
 | ------------ | -------- | ------------ |
@@ -128,7 +128,7 @@ pnpm run start
 
 ---
 
-<Route author="DIYgod" example="/pixiv/search/麻衣/popular/2" path="/pixiv/search/:keyword/:order?/:mode?" paramsDesc={['关键词', '排序方式，`popular` 按热门度排序，空或其他任意值按时间排，默认为 `date`', '过滤方式，见下表 默认为空']}>
+<Route author="DIYgod" example="/pixiv/search/Nezuko/popular/2" path="/pixiv/search/:keyword/:order?/:mode?" paramsDesc={['关键词', '排序方式，`popular` 按热门度排序，空或其他任意值按时间排，默认为 `date`', '过滤方式，见下表 默认为空']}>
 
 | 只看非 R18 内容 | 只看 R18 内容 | 不过滤   |
 | ------------ | -------- | ------------ |
@@ -225,7 +225,6 @@ pnpm run start
 -   `anticrawler`：如果目标网站有反爬机制，则设置为 `1`。
 -   `puppeteer`：如果源使用 puppeteer 抓取，则设置为 `1`。
 -   `radar`：如果此源有相应的 Radar 规则，则设置为 `1`。
--   `rssbud`：如果 Radar 规则与 RSSBud 兼容，则设置为 `1`。
 -   `configRequired`：如果 RSS 源需要通过环境变量进行额外配置，则设置为 `1`。
 -   `supportBT`：如果支持被 BitTorrent 客户端识别，则设置为 `1`。
 -   `supportPodcast`：如果源支持播客，则设置为 `1`。
@@ -234,12 +233,12 @@ pnpm run start
 通过添加这些属性，您可以向用户提供有用的信息，并使其更易于理解和使用您的路由。将这些属性添加到路由文档中将在其前面添加一个徽章。
 
 ```tsx
-<Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo?" paramsDesc={['GitHub 用户名', 'GitHub 仓库名称，默认为 `RSSHub`']} anticrawler="1" puppeteer="1" radar="1" rssbud="1" configRequired="1" supportBT="1" supportPodcast="1" supportScihub="1" />
+<Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo?" paramsDesc={['GitHub 用户名', 'GitHub 仓库名称，默认为 `RSSHub`']} anticrawler="1" puppeteer="1" radar="1" configRequired="1" supportBT="1" supportPodcast="1" supportScihub="1" />
 ```
 
 ---
 
-<Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo?" paramsDesc={['GitHub 用户名', 'GitHub 仓库名称，默认为 `RSSHub`']} anticrawler="1" puppeteer="1" radar="1" rssbud="1" configRequired="1" supportBT="1" supportPodcast="1" supportScihub="1" />
+<Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo?" paramsDesc={['GitHub 用户名', 'GitHub 仓库名称，默认为 `RSSHub`']} anticrawler="1" puppeteer="1" radar="1" configRequired="1" supportBT="1" supportPodcast="1" supportScihub="1" />
 
 ---
 
