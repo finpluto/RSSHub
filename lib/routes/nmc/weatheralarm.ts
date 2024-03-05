@@ -7,7 +7,6 @@ import * as cheerio from 'cheerio';
 export default async (ctx) => {
     const { province } = ctx.req.param();
     const alarmInfoURL = `http://www.nmc.cn/rest/findAlarm`;
-    // @ts-expect-error custom property
     const { data: response } = await got(alarmInfoURL, {
         searchParams: {
             pageNo: 1,
@@ -27,7 +26,6 @@ export default async (ctx) => {
     const items = await Promise.all(
         list.map((item) =>
             cache.tryGet(item.link, async () => {
-                // @ts-expect-error custom property
                 const { data: response } = await got(item.link);
                 const $ = cheerio.load(response);
 

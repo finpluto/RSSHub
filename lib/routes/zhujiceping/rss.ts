@@ -5,7 +5,6 @@ import { load } from 'cheerio';
 export default async (ctx) => {
     const url = 'https://www.zhujiceping.com/';
     const response = await got({ method: 'get', url });
-    // @ts-expect-error custom property
     const $ = load(response.data);
 
     const list = $('article.excerpt')

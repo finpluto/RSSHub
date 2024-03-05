@@ -197,7 +197,6 @@ const fetchArticle = (url, bypassHostCheck = false) => {
     url = normalizeUrl(url, bypassHostCheck);
     return cache.tryGet(url, async () => {
         const response = await got(url);
-        // @ts-expect-error custom field
         const $ = load(response.data);
 
         const title = ($('meta[property="og:title"]').attr('content') || '').replaceAll('\\r', '').replaceAll('\\n', ' ');
@@ -210,7 +209,6 @@ const fetchArticle = (url, bypassHostCheck = false) => {
         if (originalUrl) {
             // try to fetch the description from the original article
             const originalResponse = await got(normalizeUrl(originalUrl, bypassHostCheck));
-            // @ts-expect-error custom field
             const original$ = load(originalResponse.data);
             description += fixArticleContent(original$('#js_content'));
         }

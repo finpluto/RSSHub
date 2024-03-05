@@ -46,7 +46,6 @@ describe('rand-user-agent', () => {
                 'user-agent': mobileUa,
             },
         });
-        // @ts-expect-error custom field
         expect(resonse.data.ua).toBe(mobileUa);
     });
 });

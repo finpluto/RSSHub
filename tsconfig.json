@@ -7,15 +7,12 @@
         "jsx": "react-jsx",
         "jsxImportSource": "hono/jsx",
         "paths": {
-            "@/*": ["./lib/*"]
+            "@/*": ["./dist/lib/*"]
         },
         "esModuleInterop": true,
         "noImplicitAny": false,
-        "outDir": "./dist"
+        "outDir": "./dist",
     },
     "include": ["./lib/**/*", "./api/vercel.ts"],
-    "exclude": ["node_modules", "*.test.*"],
-    "tsc-alias": {
-        "resolveFullPaths": true
-    }
+    "exclude": ["node_modules", "*.test.*"]
 }

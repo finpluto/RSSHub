@@ -1,7 +1,7 @@
 import { config } from '@/config';
 import Redis from 'ioredis';
 import logger from '@/utils/logger';
-import type CacheModule from './base';
+import type CacheModule from './base.js';
 
 const status = { available: false };
 const clients: {

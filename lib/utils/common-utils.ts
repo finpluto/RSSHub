@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import { parseDate } from '@/utils/parse-date';
 import title from 'title';
 import os from 'os';

@@ -53,10 +53,8 @@ describe('got', () => {
             },
         });
         expect(response1.statusCode).toBe(200);
-        // @ts-expect-error custom property
         expect(response1.status).toBe(200);
         expect(response1.body).toBe('{"code": 0}');
-        // @ts-expect-error custom property
         expect(response1.data.code).toBe(0);
     });
 
@@ -70,7 +68,6 @@ describe('got', () => {
             .reply(() => [200, '{"code": 0}']);
 
         const logger = (await import('@/utils/logger')).default;
-        // @ts-expect-error unused
         const loggerSpy = vi.spyOn(logger, 'error').mockReturnValue({});
 
         try {

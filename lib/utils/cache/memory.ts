@@ -1,6 +1,6 @@
 import { LRUCache } from 'lru-cache';
 import { config } from '@/config';
-import type CacheModule from './base';
+import type CacheModule from './base.js';
 
 const status = { available: false };
 const clients: {

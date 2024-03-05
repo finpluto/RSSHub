@@ -1,6 +1,6 @@
 import { config } from '@/config';
 import puppeteer from 'puppeteer';
-import logger from './logger';
+import logger from './logger.js';
 import proxy from './proxy';
 
 const proxyChain = require('proxy-chain');

@@ -1,7 +1,7 @@
 import { config } from '@/config';
-import redis from './redis';
-import memory from './memory';
-import type CacheModule from './base';
+import redis from './redis.js';
+import memory from './memory.js';
+import type CacheModule from './base.js';
 import logger from '@/utils/logger';
 
 const globalCache: {

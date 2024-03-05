@@ -49,7 +49,6 @@ const summarizeArticle = async (articleText: string) => {
         },
     });
 
-    // @ts-expect-error custom field
     return response.data.choices[0].message.content;
 };
 
@@ -305,7 +304,6 @@ const middleware: MiddlewareHandler = async (ctx, next) => {
                     if (link) {
                         // if parser failed, return default description and not report error
                         try {
-                            // @ts-expect-error custom field
                             const { data: res } = await got(link);
                             const $ = load(res);
                             const result = await Parser.parse(link, {

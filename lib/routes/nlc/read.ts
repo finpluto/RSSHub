@@ -12,7 +12,6 @@ export default async (ctx) => {
     const rootUrl = 'http://read.nlc.cn';
     const currentUrl = new URL(`/outRes/outResList?type=${type}`, rootUrl).href;
 
-    // @ts-expect-error custom property
     const { data: response } = await got(currentUrl);
 
     const $ = load(response);

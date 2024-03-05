@@ -7,9 +7,9 @@ import art from 'art-template';
 import * as path from 'node:path';
 import { gitHash } from '@/utils/git-hash';
 
-import RequestInProgressError from './request-in-progress';
-import RejectError from './reject';
-import NotFoundError from './not-found';
+import RequestInProgressError from './request-in-progress.js';
+import RejectError from './reject.js';
+import NotFoundError from './not-found.js';
 
 import { getCurrentPath } from '@/utils/helpers';
 const __dirname = getCurrentPath(import.meta.url);

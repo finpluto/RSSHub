@@ -2,8 +2,8 @@ import { config } from '@/config';
 
 const proxyIsPAC = config.pacUri || config.pacScript;
 
-import pacProxy from './pac-proxy';
-import unifyProxy from './unify-proxy';
+import pacProxy from './pac-proxy.js';
+import unifyProxy from './unify-proxy.js';
 
 let proxyUri: string | undefined;
 let proxyObj: Record<string, any> | undefined;
