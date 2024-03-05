@@ -1,6 +1,6 @@
 {
     "framework": null,
-    "buildCommand": "tsc && resolve-tspaths",
+    "buildCommand": "tsc --project ./tsconfig.json && resolve-tspaths --project ./tsconfig.json",
     "outputDirectory": ".",
     "github": { "silent": true },
     "routes": [{ "src": "/.*", "dest": "/dist/api/vercel.js" }]
