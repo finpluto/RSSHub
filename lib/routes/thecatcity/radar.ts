@@ -1,3 +1,4 @@
+// @ts-nocheck
 const { termsMap } = require('./terms-map');
 
 export default {

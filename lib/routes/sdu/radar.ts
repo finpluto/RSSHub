@@ -1,3 +1,4 @@
+// @ts-nocheck
 const { wh } = require('./data');
 
 export default {

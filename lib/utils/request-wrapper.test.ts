@@ -42,7 +42,6 @@ afterEach(() => {
             } else {
                 check(request);
             }
-            // @ts-expect-error any
             // eslint-disable-next-line prefer-rest-params
             return Reflect.apply(origin, this, arguments);
         };

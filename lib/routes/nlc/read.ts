@@ -12,6 +12,7 @@ export default async (ctx) => {
     const rootUrl = 'http://read.nlc.cn';
     const currentUrl = new URL(`/outRes/outResList?type=${type}`, rootUrl).href;
 
+    // @ts-expect-error custom property
     const { data: response } = await got(currentUrl);
 
     const $ = load(response);
@@ -19,8 +20,8 @@ export default async (ctx) => {
     const items = $('ul.YMH2019_New_GRZX_list7 li a.aa')
         .slice(0, limit)
         .toArray()
-        .map((item) => {
-            item = $(item);
+        .map((elem) => {
+            const item = $(elem);
 
             const title = item.find('span').first().text();
 
@@ -31,8 +32,8 @@ export default async (ctx) => {
                     images: item
                         .find('div.pic img')
                         .toArray()
-                        .map((i) => {
-                            i = $(i);
+                        .map((elem) => {
+                            const i = $(elem);
 
                             return {
                                 src: i.prop('src'),

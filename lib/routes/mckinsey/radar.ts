@@ -1,3 +1,4 @@
+// @ts-nocheck
 const { categories } = require('./cn/category-map');
 export default {
     'mckinsey.com.cn': {

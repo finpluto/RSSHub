@@ -92,7 +92,6 @@ const httpWrap = (func: typeof http.request) => {
         }
         requestWrapper(url, options);
 
-        // @ts-expect-error apply
         return origin.apply(this, args);
     };
     return warpped;

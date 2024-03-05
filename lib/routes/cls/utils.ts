@@ -1,5 +1,4 @@
-// @ts-nocheck
-const CryptoJS = require('crypto-js');
+import crypto from 'crypto-js';
 
 const rootUrl = 'https://www.cls.cn';
 
@@ -12,7 +11,7 @@ const params = {
 const getSearchParams = (moreParams) => {
     const searchParams = new URLSearchParams({ ...params, ...moreParams });
     searchParams.sort();
-    searchParams.append('sign', CryptoJS.MD5(CryptoJS.SHA1(searchParams.toString()).toString()).toString());
+    searchParams.append('sign', crypto.MD5(crypto.SHA1(searchParams.toString()).toString()).toString());
     return searchParams;
 };
 

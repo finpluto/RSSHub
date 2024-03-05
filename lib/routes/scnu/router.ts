@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default (router) => {
     router.get('/cs/match', './cs/match');
     router.get('/jw', './jw');

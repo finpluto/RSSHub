@@ -15,6 +15,7 @@ export default async (ctx) => {
             Referer: `https://space.bilibili.com/${uid}/`,
         },
     });
+    // @ts-expect-error custom property
     const { data, code, message } = response.data;
     if (code) {
         throw new Error(message ?? code);
